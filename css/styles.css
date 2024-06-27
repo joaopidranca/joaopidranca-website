@@ -235,7 +235,7 @@ body {
 
 .preloader {
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
 }
 
 .preloader__background {
@@ -10806,7 +10806,7 @@ nav {
 #mainNav {
   background-color: #fff;
   transition: background-color 0.2s ease;
-  z-index: 3;
+  z-index: 4;
 }
 #mainNav .navbar-brand {
   font-family: "Crimson", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -10814,7 +10814,6 @@ nav {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #212529;
-  z-index: 3;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #6c757d;
@@ -10824,16 +10823,13 @@ nav {
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.75rem 0;
-  z-index: 3;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav .navbar-nav .nav-item .nav-link:active {
   color: #ffcc00;
-  z-index: 3;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
   color: #ffcc00 !important;
-  z-index: 3;
 }
 
 .nav-opacity {
