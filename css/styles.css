@@ -127,6 +127,10 @@
   }
 }
 
+#imgMainMo {
+  height: 5rem;
+
+}
 /* FONTES */
 
 /* body {
@@ -235,7 +239,7 @@ body {
 
 .preloader {
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
 }
 
 .preloader__background {
@@ -260,6 +264,7 @@ body {
   line-height: 1;
   z-index: 10;
   color: white;
+  opacity: 0;
 }
 
 .preloader__text span {
@@ -439,6 +444,7 @@ footer p {
 
 /* GSAP PROJECTOS SECTION */
 
+
 .b--header-a {
   position: fixed;
   padding: 3rem 0;
@@ -451,7 +457,21 @@ footer p {
   .b--header-a {
     padding: 1.5rem 0;
   }
+  #projetos-section {
+  display: none;
 }
+}
+
+@media all and (min-width: 580px) {
+  #projetos-section-mobile {
+  display: none;
+}
+}
+
+#projetos-section {
+  display: 1;
+}
+
 .b--header-a__wrapper {
   display: flex;
   align-items: center;
@@ -463,9 +483,8 @@ footer p {
   font-family: "Hanken Grotesk";
   font-weight: bold;
   letter-spacing: 0.02em;
-  line-height: 1.38rem;
+  line-height: 1rem;
   font-size: 1.125rem;
-  margin: 0 auto;
   margin-top: 1rem;
   color: white;
 }
@@ -488,6 +507,16 @@ footer p {
   display: flex;
   align-items: center;
   height: 100vh;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  /*  
+  background-color: #0d6efd; 
+  background: linear-gradient(90deg, #e04220 0%, #0d6efd 100%); */
+}
+
+.b--hero-a-mobile {
+  position: relative;
+  display: flex;
   scrollbar-width: none;
   overflow-x: hidden;
   /*  
@@ -542,6 +571,21 @@ footer p {
   color: #fff;
 }
 
+.b--hero-a__title-mobile {
+    line-height: 110%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: "Hanken Grotesk";
+    padding-top: 6rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+    max-width: 80vw;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
 .b--hero-a__paragraph {
   position: fixed;
   top: 65%;
@@ -557,6 +601,20 @@ footer p {
   font-size: 1.05rem;
   color: #fff;
   text-align: justify;
+}
+
+.b--hero-a__paragraph-mobile {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Hanken Grotesk";
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+    z-index: 4;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-align: justify;
 }
 
 @media all and (max-width: 800px) {
@@ -602,8 +660,7 @@ footer p {
     position: relative;
     left: 10%;
     top: 0%;
-
-    padding-left: 3rem;
+    padding-left: 0px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -672,7 +729,6 @@ footer p {
 @media all and (max-width: 580px) {
   .b--card-b,
   .b--card-c {
-    height: 55vh;
     opacity: 1;
   }
 }
@@ -1254,7 +1310,13 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  max-height: 60%;
+}
+
+.img-fluid-m {
+  width: 100%; /* or any custom size */
+  height: 100%; 
+  object-fit: contain;
 }
 
 .img-thumbnail {

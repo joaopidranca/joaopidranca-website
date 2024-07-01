@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   $("#artisticos").hide();
   $("#reportagens").hide();
 
-  $("#button-reportagens").on("click", function () {
+  $("#button-reportagens, #button-reportagens-m").on("click", function () {
     $("#VIDEOS-SOLTOS").hide();
     $("#fotografias").hide();
     $("#curtas").hide();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     $("#reportagens").show();
   });
 
-  $("#button-artisticos").on("click", function () {
+  $("#button-artisticos, #button-artisticos-m").on("click", function () {
     $("#VIDEOS-SOLTOS").hide();
     $("#fotografias").hide();
     $("#curtas").hide();
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     $("#reportagens").hide();
   });
 
-  $("#button-curtas").on("click", function () {
+  $("#button-curtas, #button-curtas-m").on("click", function () {
     $("#VIDEOS-SOLTOS").hide();
     $("#fotografias").hide();
     $("#curtas").show();
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     $("#reportagens").hide();
   });
 
-  $("#button-fotos").on("click", function () {
+  $("#button-fotos, #button-fotos-m").on("click", function () {
     $("#VIDEOS-SOLTOS").hide();
     $("#fotografias").show();
     $("#curtas").hide();

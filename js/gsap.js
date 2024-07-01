@@ -53,25 +53,25 @@ const preloaderAnimation = () => {
 
     tl.to(preloaderText, {
         yPercent: -10,
-        delay: 0.3
+        delay: 0
     })
     .to(preloaderText, {
         yPercent: -120,
-        delay: 1
-    })
+        delay: 0
+    }, '<')
 
     .to(preloaderBackground, {
         duration: 0.6,
         ease: "power4.inOut",
         backgroundColor: " #e04220"
         // backgroundColor: "#ffc107"
-    }, '<')
+    }, '-=.1')
 
     .to(preloaderBackground, {
         yPercent: -100,
         duration: 1.3,
         ease: "power4.inOut",
-    }, '-=.35')
+    }, '-=.1')
 
     return tl;
 }
@@ -157,6 +157,6 @@ const UIAnimation = () => {
 
 master
  .add(setInitialStates())
- .add(preloaderAnimation())
- .add(heroImageAnimation(), '-=1.5')
+ .add(preloaderAnimation(), '-=.1')
+ .add(heroImageAnimation(), '-=1')
  .add(UIAnimation(), '-=1.8')
