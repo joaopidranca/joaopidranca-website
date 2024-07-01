@@ -1319,6 +1319,11 @@ progress {
   object-fit: contain;
 }
 
+.img-fluid-m .img-art {
+  position: relative;
+  top: 47%;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

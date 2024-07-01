@@ -205,8 +205,8 @@ Olá! Este é um site do:
       </section>
     </div>
 
-    <!-- PROJETOS GSAP SECTION -->
     <div id="projetos"></div>
+    <!-- PROJETOS GSAP SECTION -->
     <div id="projetos-section" style="background-color: #202020">
       <!-- section div -->
 
@@ -325,7 +325,7 @@ Olá! Este é um site do:
                   title="REPORTAGENS"
                 >
 
-                <div id="imgMainMo" class="imgLiquidFill imgLiquid">
+                <div id="imgMainMo" class="imgLiquidFillReportagens imgLiquid">
                 <img
                   class="img-fluid-m"
                   src="./assets/imgs-pages/camera-1.jpg"
@@ -345,7 +345,7 @@ Olá! Este é um site do:
                   title="ARTÍSTICOS"
                 >
 
-                <div id="imgMainMo" class="imgLiquidFill imgLiquid">
+                <div id="imgMainMo" class="imgLiquidFillCenter imgLiquid">
                 <img
                   class="img-fluid-m"
                   src="./assets/imgs-pages/luz-1.jpg"
@@ -369,7 +369,7 @@ Olá! Este é um site do:
 
                 <div id="imgMainMo" class="imgLiquidFill imgLiquid">
                 <img
-                  class="img-fluid-m"
+                  class="img-fluid-m img-art"
                   src="./assets/imgs-pages/purificacao-3.jpg"
                   alt="CURTAS"
                 />
@@ -383,11 +383,11 @@ Olá! Este é um site do:
                 <a
                   id="button-fotos-m"
                   class="portfolio-box-h"
-                  href="#fotos"
+                  href="#fotografias"
                   title="FOTOS"
                 >
 
-                <div id="imgMainMo" class="imgLiquidFill imgLiquid">
+                <div id="imgMainMo" class="imgLiquidFillFotos imgLiquid">
                 <img
                   class="img-fluid-m"
                   src="./assets/fotos/roma-1.jpg"
@@ -4166,6 +4166,24 @@ Olá! Este é um site do:
           fill: true,
           horizontalAlign: "center",
           verticalAlign: "top",
+        });
+
+        $(".imgLiquidFillCenter").imgLiquid({
+          fill: true,
+          horizontalAlign: "center",
+          verticalAlign: "center",
+        });
+
+        $(".imgLiquidFillReportagens").imgLiquid({
+          fill: true,
+          horizontalAlign: "center",
+          verticalAlign: "27%",
+        });
+
+        $(".imgLiquidFillFotos").imgLiquid({
+          fill: true,
+          horizontalAlign: "center",
+          verticalAlign: "70%",
         });
 
         $(".imgLiquidNoFill").imgLiquid({
