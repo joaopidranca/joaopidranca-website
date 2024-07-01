@@ -157,7 +157,7 @@
 
 
 
-            <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-yellow py-5">
       <div class="row g-4 p-4">
         <div class="text-start col-lg-4 col-sm-6">
@@ -171,13 +171,8 @@
 
         <div class="text-center col-lg-4 col-sm-6">
           <p class="footer-title">contactos:</p>
-          <br />
-          <div>
-            <div class="footer-email" id="footer-email" onclick="copy(this)"
-            >joaopidranca@gmail.com</div
-          >
-
-          </div>
+          <h4 class="footer-email" id="footer-email" onclick="copy(this)">joaopidranca@gmail.com</h4>
+          <p id="footer-textField" style="opacity: 0;" >email copiado!</p>
           
           <div class="footer-icons text-center m-4">
             <a
@@ -224,12 +219,55 @@
                 <!-- Core theme JS-->
         <script src="../js/scripts-pages.js"></script>
 
+          <!-- GSAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+
+
         <!-- Grain JS -->
         <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
 
-       
-<!-- Gran Settings JS-->
+        <!-- Gran Settings JS-->
         <script src="../js/grain-settings.js"></script>
-        
+
+            <!-- Script para copy on click-->
+    <script>
+      //  onclick="copy(this)"
+      function copy(that) {
+        var inp = document.createElement("input");
+        document.body.appendChild(inp);
+        inp.value = that.textContent;
+        inp.select();
+        document.execCommand("copy", false);
+        inp.remove();
+
+        var ftext = document.getElementById("footer-textField");
+        ftext.style.opacity = "1";
+      }
+
+    </script>
+
+    <!-- Scale on click JS -->
+    <script>
+      document.querySelector(".footer-email").addEventListener("click", (e) => {
+        gsap.fromTo(
+          ".footer-email",
+          { scale: 1 },
+          {
+            scale: 0.95,
+            duration: 0.15,
+            yoyo: true,
+            repeat: 1,
+            overwrite: true,
+          }
+        );
+      });
+    </script>
+
     </body>
 </html>

@@ -152,13 +152,8 @@ Neste projecto fotográfico o artista explora a sobreposição de movimentos a p
 
         <div class="text-center col-lg-4 col-sm-6">
           <p class="footer-title">contactos:</p>
-          <br />
-          <div>
-            <div class="footer-email" id="footer-email" onclick="copy(this)"
-            >joaopidranca@gmail.com</div
-          >
-
-          </div>
+          <h4 class="footer-email" id="footer-email" onclick="copy(this)">joaopidranca@gmail.com</h4>
+          <p id="footer-textField" style="opacity: 0;" >email copiado!</p>
           
           <div class="footer-icons text-center m-4">
             <a
@@ -205,14 +200,7 @@ Neste projecto fotográfico o artista explora a sobreposição de movimentos a p
                 <!-- Core theme JS-->
         <script src="../js/scripts-pages.js"></script>
 
-        <!-- Grain JS -->
-        <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
-
-       
-<!-- Gran Settings JS-->
-        <script src="../js/grain-settings.js"></script>
-
-            <!-- GSAP JS-->
+          <!-- GSAP JS-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
@@ -221,57 +209,14 @@ Neste projecto fotográfico o artista explora a sobreposição de movimentos a p
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
 
-    <!-- GSAP Landing Page Animation  Script JS-->
-    <script src="js/gsap.js"></script>
 
-    <!-- Grain JS -->
-    <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+        <!-- Grain JS -->
+        <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
 
-   
-    <script>
-      var options = {
-        animate: true,
-        patternWidth: 253.15,
-        patternHeight: 366.63,
-        grainOpacity: 0.07,
-        grainDensity: 1,
-        grainWidth: 1,
-        grainHeight: 1,
-      };
+        <!-- Gran Settings JS-->
+        <script src="../js/grain-settings.js"></script>
 
-      grained("#grainad", options);
-    </script>
-
-        <!-- SimpleLightbox plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-
-    <!-- core JS-->
-    <script src="js/scripts.js"></script>
-
-    <!-- Lenis Smooth Scroll JS -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-
-    <!--   <script>
-
-            const lenis = new Lenis({
-            duration: 1.5,
-            easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
-                direction: 'vertical',
-            smooth: true,
-            smoothTouch: false,
-            touchMultiplier: 1.5,
-            })
-
-            function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-            }
-
-            requestAnimationFrame(raf)
-
-        </script> -->
-
-    <!-- Script para copy on click-->
+            <!-- Script para copy on click-->
     <script>
       //  onclick="copy(this)"
       function copy(that) {
@@ -281,7 +226,11 @@ Neste projecto fotográfico o artista explora a sobreposição de movimentos a p
         inp.select();
         document.execCommand("copy", false);
         inp.remove();
+
+        var ftext = document.getElementById("footer-textField");
+        ftext.style.opacity = "1";
       }
+
     </script>
 
     <!-- Scale on click JS -->
@@ -300,320 +249,6 @@ Neste projecto fotográfico o artista explora a sobreposição de movimentos a p
         );
       });
     </script>
-
-    <!-- GSAP MALUQUEIRA-->
-    <script>
-      console.clear();
-
-      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Draggable);
-
-      class HorizontalSection {
-        constructor() {
-          this.DOM = {
-            container: document.querySelector(".js--hero-a"),
-            progress: document.querySelector(".b--progress-a__item__artwork"),
-            hero: document.querySelector(".b--hero-a"),
-            pin: document.getElementById("projetos-section"),
-            cards: gsap.utils.toArray(".b--card-b"),
-          };
-
-          this.init();
-        }
-        init() {
-          var tl = gsap
-            .timeline({
-              scrollTrigger: {
-                trigger: this.DOM.container,
-                invalidateOnRefresh: true,
-                pin: this.DOM.pin,
-                scrub: 1,
-                start: "top top",
-                end: () => "+=" + this.DOM.container.offsetWidth,
-              },
-            })
-            .to(this.DOM.container, {
-              x: () =>
-                -(
-                  this.DOM.container.scrollWidth -
-                  document.documentElement.clientWidth
-                ),
-              ease: "power1.out",
-            })
-            // progress bar
-            .to(
-              this.DOM.progress,
-              {
-                width: "100%",
-                ease: "power3.out",
-              },
-              "<"
-            );
-
-          // Parallax das imagens do wrapper (as b--hero-a__wrapper__content)
-
-          const newLocal = gsap.to(".parallax-img", {
-            backgroundPositionX: "75%",
-            ease: "power1.out",
-            scrollTrigger: {
-              trigger: ".parallax-img",
-              containerAnimation: tl,
-              start: "left 100%",
-              end: "left 5%",
-              scrub: true,
-              id: "2",
-              markers: false,
-            },
-          });
-        }
-      }
-
-      new HorizontalSection();
-
-      /*
-
-let sections = document.querySelectorAll(".b--hero-a__wrapper__content");
-let scrollContainer = document.querySelector(".js--hero-a");
-let scrollTween = gsap.to(scrollContainer, {
-  xPercent: -10, // * (sections.length - 1),
-  ease: "none"
-});
-
-let horizontalScroll = ScrollTrigger.create({
-  animation: scrollTween,
-  trigger: scrollContainer,
-  pin: true,
-  scrub: 1,
-  end: "+=10%" // () => "+=" + scrollContainer.offsetWidth,
-});
-
-
-var drag = Draggable.create(".proxy", {
-  trigger: scrollContainer,
-  type: "x",
-  onPress() {
-    clamp || ScrollTrigger.refresh();
-    this.startScroll = horizontalScroll.scroll();
-  },
-  onDrag: function() {
-    horizontalScroll.scroll(-this.x);
-  }
-})[0];
-
-
-ScrollTrigger.addEventListener("refresh", () => {
-  clamp = gsap.utils.clamp(horizontalScroll.start + 1, horizontalScroll.end - 1); // don't let the drag-scroll hit the very start or end so that it doesn't unpin
-  // total scroll amount divided by the total distance that the sections move gives us the ratio we can apply to the pointer movement so that it fits. 
-   dragRatio = scrollContainer.offsetWidth / (window.innerWidth * (sections.length - 1));
-});
-
-
-*/
-
-      // THE DRAG
-      /*
-
-let sections = document.querySelectorAll(".b--hero-a__wrapper__content");
-let scrollContainer = document.querySelector(".js--hero-a");
-let clamp, dragRatio;
-
-let scrollTween = gsap.to(scrollContainer, {
-  xPercent: -10, // * (sections.length - 1),
-  ease: "none"
-});
-
-let horizontalScroll = ScrollTrigger.create({
-  animation: scrollTween,
-  trigger: scrollContainer,
-  pin: true,
-  scrub: 1,
-  end: "bottom bottom", 
-});
-
-var drag = Draggable.create(".proxy", {
-  trigger: scrollContainer,
-  type: "x",
-  onPress() {
-    clamp || ScrollTrigger.refresh();
-    this.startScroll = horizontalScroll.scroll();
-  },
-  onDrag() {
-    horizontalScroll.scroll(clamp(this.startScroll - (this.x - this.startX) * dragRatio));
-    // if you don't want it to lag at all while dragging (due to the 1-second scrub), uncomment the next line:
-    // horizontalScroll.getTween().progress(1);
-  }
-})[0];
-
-ScrollTrigger.addEventListener("refresh", () => {
-  clamp = gsap.utils.clamp(horizontalScroll.start + 1, horizontalScroll.end - 1); // don't let the drag-scroll hit the very start or end so that it doesn't unpin
-  // total scroll amount divided by the total distance that the sections move gives us the ratio we can apply to the pointer movement so that it fits. 
-   dragRatio = scrollContainer.offsetWidth / (window.innerWidth * (sections.length - 1));
-});
-
-
-*/
-    </script>
-    <!-- 
-<script>
-    console.clear();
-
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable,InertiaPlugin);
-
-/* SCROLL TRIGGER SCROLLER */
-
-var scroller = document.querySelector(".wrapper");
-
-var sections = document.querySelectorAll(".section");
-var numSections = sections.length;
-var sectionWidth = Math.floor(scroller.offsetWidth / numSections);
-var scrollStops = []; // creat scrollStops array
-
-var scrollWidth;
-  
-var proxy = document.createElement("div");
-var draggable = Draggable.create(proxy, {
-  trigger: ".wrapper",
-  type: "x",
-  onDrag: function() {
-    trigger.scroll(-this.x);
-  }
-})[0];
-
-function createScroller() {
-  scrollWidth = scroller.offsetWidth - innerWidth;
-  draggable.applyBounds({minX: -scrollWidth, maxX: 0});
-  ScrollTrigger.addEventListener("refreshInit", () => {
-    scrollWidth = scroller.offsetWidth - innerWidth;
-    gsap.set(document.body, {height: scrollWidth + innerHeight});
-  });
-}
-  
-function updateProxy() {
-  // move the handler to the corresponding ratio according to the page's scroll position.
-  gsap.set(proxy, {x: -trigger.scroll()});
-}
-
-function stopPositions() {
-  for(i=0;i<sections.length;i++){
-  scrollStops.push(scroller.offsetWidth/sections.length * (i))
-  };
-}
-
-window.onresize = function(event) {
-  scrollStops = [];
-  stopPositions();
-};
-
-stopPositions();
-
-createScroller();
-
-var trigger;
-
-ScrollTrigger.matchMedia({
-    
-    // desktop
-    "(min-width: 1350px)": function() {
-      
-      // gsap.set(document.body, {height: scrollWidth + innerHeight});
-      var anim = gsap.to(scroller, {
-          x: () => -scrollWidth,
-          ease: "none", 
-      });
-      
-      trigger = ScrollTrigger.create({
-        animation: anim,
-        id: 'tlScroller',
-        scrub: 0.75,
-        start: "left left",
-        end: "bottom bottom",
-        // start: 0,
-        // end: scrollWidth,
-        // horizontal: true,
-        // markers: true,
-        invalidateOnRefresh: true,
-        onUpdate: updateProxy
-      });
-
-    },
-    // tablet
-    "(max-width: 1349px)": function() {
-      
-      // gsap.set(document.body, {innerHeight});
-      var anim = gsap.to(scroller, {
-          x: () => -scrollWidth,
-          ease: "none", 
-      });
-      trigger = ScrollTrigger.create({
-        animation: anim,
-        id: 'tlScroller',
-        scrub: 0.75,
-        start: "left left",
-        end: "bottom bottom",
-        // start: 0,
-        // end: scrollWidth,
-        // horizontal: true,
-        // markers: true,
-        invalidateOnRefresh: true,
-        onUpdate: updateProxy
-      });
-    }
-  });
-</script> -->
-
-    <!-- legacy gsap title animation
-
-
-        <script>
-            const text = new SplitType('#text-header')
-
-
-            gsap.to('.char', {
-            y: -10,
-            stagger: .00,
-            delay: 0.1,
-            duration: .15
-        })
-
-
-
-        </script>
-
-         <script>
-            const text2 = new SplitType('#text-header-2')
-
-
-            gsap.to('.char', {
-            y: -5,
-            stagger: .00,
-            delay: .7,
-            duration: .10
-        })
-
-
-
-        </script>
-
-        <script>
-            const text3 = new SplitType('#icon-header')
-
-
-            gsap.to('.char', {
-            y: -5,
-            stagger: .00,
-            delay: .7,
-            duration: .10
-        })
-
-
-
-        </script> -->
-
-
-  
-   
-
-
-    
 
     </body>
 </html>

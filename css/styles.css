@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bs-blue: #0d6efd;
@@ -186,7 +186,7 @@ body {
   /* background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif); */
 
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: "Hanken Grotesk";
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -235,7 +235,7 @@ body {
 
 .preloader {
   overflow: hidden;
-  opacity: 1;
+  opacity: 0;
 }
 
 .preloader__background {
@@ -329,7 +329,7 @@ body {
 }
 
 .hero__title {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Hanken Grotesk";
   font-size: 7rem;
   font-weight: 700;
   max-width: 11ch;
@@ -401,6 +401,11 @@ footer p {
   font-size: 2rem;
 }
 
+#footer-textField {
+  pointer-events: none;
+  top: 1%;
+}
+
 #footer-email {
   padding: 15px;
   text-align: center;
@@ -455,7 +460,7 @@ footer p {
 
 .b--header-a__wrapper__title {
   text-transform: uppercase;
-  font-family: "Clash Display", sans-serif;
+  font-family: "Hanken Grotesk";
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.38rem;
@@ -529,8 +534,8 @@ footer p {
   z-index: 4;
   transform: translateY(-50%);
   text-transform: uppercase;
-  font-family: "Clash Display", sans-serif;
-  font-weight: 600;
+  font-family: "Hanken Grotesk";
+  font-weight: 900;
   letter-spacing: 0.02em;
   line-height: 100%;
   font-size: 6rem;
@@ -545,10 +550,11 @@ footer p {
   width: 100%;
   z-index: 4;
   transform: translateY(-50%);
-  font-weight: 100;
+  font-family: "Hanken Grotesk";
+  font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 145%;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #fff;
   text-align: justify;
 }
@@ -10809,17 +10815,13 @@ nav {
   z-index: 4;
 }
 #mainNav .navbar-brand {
-  font-family: "Crimson", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Hanken Grotesk";
   font-weight: 700;
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   color: #6c757d;
-  font-family: "Crimson", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Hanken Grotesk";
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.75rem 0;
@@ -10955,9 +10957,7 @@ header.masthead .h1 {
   .portfolio-box-h
   .portfolio-box-caption-h
   .project-category-h {
-  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Hanken Grotesk";
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;

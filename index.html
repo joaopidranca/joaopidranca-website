@@ -211,7 +211,9 @@ Olá! Este é um site do:
       <!-- section div -->
 
       <section class="b--hero-a">
-        <h2 class="b--hero-a__title js--hero-a-title">projetos</h2>
+        <h2 id="projetos" class="b--hero-a__title js--hero-a-title">
+          projetos
+        </h2>
         <p class="b--hero-a__paragraph">
           faço bastantes reportagens culturais, gravo e edito algumas músicas,
           performances artísticas, cidades e pessoas. <br /><br />também faço
@@ -221,7 +223,7 @@ Olá! Este é um site do:
           nariz.
         </p>
 
-        <div id="projetos" class="draggable b--hero-a__wrapper js--hero-a">
+        <div class="draggable b--hero-a__wrapper js--hero-a">
           <div class="b--hero-a__wrapper__content">
             <a
               id="button-reportagens"
@@ -3030,6 +3032,29 @@ Olá! Este é um site do:
                   </div>
                 </a>
               </div>
+              <div class="col-lg-4 col-sm-6">
+                <a
+                  class="portfolio-box-h"
+                  target="_blank"
+                  href="../artisticos/marcelo-dos-reis-flora"
+                  title="MARCELO DOS REIS FLORA"
+                >
+                  <img
+                    class="img-fluid"
+                    src="assets/imgs-portfolio/marcelo-dos-reis-flora.jpg"
+                    alt="MARCELO DOS REIS FLORA"
+                  />
+                  <div class="portfolio-box-caption-h">
+                    <div class="project-category-h text-white-50">música</div>
+                    <div class="project-name-h font-weight-bold">
+                      MARCELO DOS REIS FLORA
+                    </div>
+                    <div class="project-name-h font-weight-bold">
+                      AMANINTA & TAMPANENSIS (LIVE)
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -3441,12 +3466,8 @@ Olá! Este é um site do:
 
         <div class="text-center col-lg-4 col-sm-6">
           <p class="footer-title">contactos:</p>
-          <br />
-          <div>
-            <div class="footer-email" id="footer-email" onclick="copy(this)">
-              joaopidranca@gmail.com
-            </div>
-          </div>
+          <h4 class="footer-email" id="footer-email" onclick="copy(this)">joaopidranca@gmail.com</h4>
+          <p id="footer-textField" style="opacity: 0;" >email copiado!</p>
 
           <div class="footer-icons text-center m-4">
             <a
@@ -3548,7 +3569,11 @@ Olá! Este é um site do:
         inp.select();
         document.execCommand("copy", false);
         inp.remove();
+
+        var ftext = document.getElementById("footer-textField");
+        ftext.style.opacity = "1";
       }
+
     </script>
 
     <!-- Scale on click JS -->
