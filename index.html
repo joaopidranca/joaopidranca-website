@@ -3921,6 +3921,15 @@ Olá! Este é um site do:
                   <div class="portfolio-box-caption"></div>
                 </a>
 
+                <a class="portfolio-box" href="assets/fotos/vouzela.jpg">
+                  <img
+                    class="img-fluid"
+                    src="assets/fotos/vouzela.jpg"
+                    alt="..."
+                  />
+                  <div class="portfolio-box-caption"></div>
+                </a>
+
                 <a class="portfolio-box" href="assets/fotos/milan-bike-2.jpg">
                   <img
                     class="img-fluid"
@@ -4324,18 +4333,17 @@ Olá! Este é um site do:
 
       // TEXT REVEAL
 
-
-      let reveal = document.querySelectorAll(".reveal") 
+      let reveal = document.querySelectorAll(".reveal");
 
       reveal.forEach( (el) => {
         let headings = el.querySelectorAll("h2, p, img, a, div")
         
         let tl = gsap.timeline ()
-        .from(headings, {y:70, stagger:0.05, opacity:0, duration:1, ease:"power1.out"})
+        .from(headings, {y:70, stagger:0.05, opacity:0, duration:1, ease:"power3.out"})
         
         ScrollTrigger.create ({
             trigger: el,
-            start: "top 100%", 
+            start: "center 100%", 
             end:"top 50%",
             markers: false,
             toggleActions: "play none none reverse ",
