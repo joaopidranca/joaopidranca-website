@@ -1,8 +1,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+  
   // Activate SimpleLightbox
   new SimpleLightbox({
     elements: "#portfolio a.portfolio-box",
   });
+
+  
 
   let navToggle = document.querySelector(".nav-toggle");
   let bars = document.querySelectorAll(".bar");
