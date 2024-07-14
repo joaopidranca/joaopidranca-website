@@ -258,6 +258,18 @@
 
         </script>
 
+        <script>
+
+  let navToggle = document.querySelector(".nav-toggle");
+  let bars = document.querySelectorAll(".bar");
+
+  function toggleHamburger(e) {
+    bars.forEach((bar) => bar.classList.toggle("barx"));
+  }
+
+  navToggle.addEventListener("click", toggleHamburger);
+        </script>
+
             <script>
       //  onclick="copy(this)"
       function copy(that) {
