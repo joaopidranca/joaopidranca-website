@@ -251,5 +251,45 @@
 <!-- Gran Settings JS-->
         <script src="../js/grain-settings.min.js"></script>
 
+        <script>
+    new SimpleLightbox({
+    elements: "#portfolio a.portfolio-box",
+  });
+
+        </script>
+
+            <script>
+      //  onclick="copy(this)"
+      function copy(that) {
+        var inp = document.createElement("input");
+        document.body.appendChild(inp);
+        inp.value = that.textContent;
+        inp.select();
+        document.execCommand("copy", false);
+        inp.remove();
+
+        var ftext = document.getElementById("footer-textField");
+        ftext.style.opacity = "1";
+      }
+
+    </script>
+
+        <!-- Scale on click JS -->
+    <script>
+      document.querySelector(".footer-email").addEventListener("click", (e) => {
+        gsap.fromTo(
+          ".footer-email",
+          { scale: 1 },
+          {
+            scale: 0.95,
+            duration: 0.15,
+            yoyo: true,
+            repeat: 1,
+            overwrite: true,
+          }
+        );
+      });
+    </script>
+
     </body>
 </html>
