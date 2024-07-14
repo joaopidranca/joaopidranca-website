@@ -239,12 +239,24 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 
 
-    <script>
+        <script>
     new SimpleLightbox({
     elements: "#portfolio a.portfolio-box",
   });
 
-    </script>
+        </script>
+
+        <script>
+
+  let navToggle = document.querySelector(".nav-toggle");
+  let bars = document.querySelectorAll(".bar");
+
+  function toggleHamburger(e) {
+    bars.forEach((bar) => bar.classList.toggle("barx"));
+  }
+
+  navToggle.addEventListener("click", toggleHamburger);
+        </script>
 
             <!-- Script para copy on click-->
     <script>
