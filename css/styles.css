@@ -8,8 +8,9 @@
   --bs-red: #dc3545;
   --bs-orange: #f4623a;
   --bs-yellow: #ffc107;
+  --bs-yellow-2: #ffc300;
+  --bs-yellow-3: #f5c000;
   --bs-banana: #ffe135;
-  --bs-yellow2: #FFFACD;
   --bs-honey: #FFC30B;
   --bs-green: #198754;
   --bs-teal: #20c997;
@@ -9012,7 +9013,7 @@ nav {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: var(--bs-dark-2);
   font-family: "Hanken Grotesk";
   font-weight: 700;
   font-size: 0.9rem;
@@ -9041,13 +9042,13 @@ nav {
     z-index: 3;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--bs-dark-2);
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--bs-dark-2);
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
