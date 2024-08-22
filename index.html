@@ -4151,8 +4151,8 @@
     </section>
 
 
-<div class="m-2 text-center">
-    <a href="#projetos" aria-label="button" class="scroll_button button text-center hero__button" id="scrollbuttonid" title="Voltar ao topo">
+<div class="m-3 scroll_align">
+    <a href="#projetos" aria-label="button" class="scroll_button text-center hero__button" id="scrollbuttonid" title="Voltar ao topo">
       <i class="fa-solid fa-chevron-up"></i>
     </a>
 </div>
@@ -4280,11 +4280,13 @@
     let mysBtn = document.getElementById('scrollbuttonid');
 
     window.addEventListener('scroll', function () {
-    if (document.body.scrollTop > 7000
-        || document.documentElement.scrollTop > 7000) {
+    if (document.body.scrollTop > 6500
+        || document.documentElement.scrollTop > 6500) {
+        //mysBtn.style.display = 'block';
         mysBtn.style.transition = 'opacity .4s';
         mysBtn.style.opacity = '1';
     } else {
+        //mysBtn.style.display = 'none';
         mysBtn.style.transition = 'opacity .2s';
         mysBtn.style.opacity = '0';
     }
@@ -4458,10 +4460,6 @@
           });
         }
       }
-
-
-
-
 
 
 

@@ -228,8 +228,13 @@ body {
 text-align: center;
 }
 
+.scroll_align {
+display: flex;
+justify-content: flex-end;
+}
+
 .scroll_button {
-    display: none;
+    display: block;
     position: fixed;
     bottom: 30px;
     cursor: pointer;
@@ -240,10 +245,11 @@ text-align: center;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    display: block;
+    opacity: 0;
 }
 
-.button:hover, .sobre_button:hover {
+
+.button:hover, .sobre_button:hover, .scroll_button:hover {
   background-color: #e04220;
   color: white;
 }
