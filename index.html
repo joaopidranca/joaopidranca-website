@@ -79,7 +79,7 @@
 
     <!-- CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/css/styles.min.css" rel="stylesheet"> -->
-    <link href="/css/styles.css" rel="stylesheet" /> 
+    <link href="/css/styles.min.css" rel="stylesheet" /> 
     
 
   </head>
@@ -4150,6 +4150,16 @@
 
     </section>
 
+
+<div class="m-2 text-center">
+    <a href="#projetos" aria-label="button" class="scroll_button button text-center hero__button" id="scrollbuttonid" title="Voltar ao topo">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+</div>
+
+
+
+
     <!-- Footer -->
     <footer>
       <div class="row g-4 p-4">
@@ -4263,6 +4273,24 @@
         requestAnimationFrame(raf)
 
     </script> -->
+
+
+    <!-- SCROLL TO TOP BUTTON -->
+
+    <script>
+      let mysBtn = document
+    .getElementById('scrollbuttonid');
+
+    window.addEventListener('scroll', function () {
+    if (document.body.scrollTop > 7000
+        || document.documentElement.scrollTop > 7000) {
+        mysBtn.style.display = 'block';
+    } else {
+        mysBtn.style.display = 'none';
+    }
+});
+
+    </script>
 
     <!-- imgLiquid JS-->
     <script src="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/js/imgLiquid.min.js"></script>

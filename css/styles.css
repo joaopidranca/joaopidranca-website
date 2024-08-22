@@ -228,6 +228,20 @@ body {
 text-align: center;
 }
 
+.scroll_button {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    cursor: pointer;
+    background-color: white;
+    color: #202020;
+    padding: 12px 20px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
 .button:hover, .sobre_button:hover {
   background-color: #e04220;
   color: white;
