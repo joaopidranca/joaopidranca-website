@@ -284,7 +284,7 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--bs-dark-2);
   text-align: center;
   padding-inline: 24px;
     z-index: 2;

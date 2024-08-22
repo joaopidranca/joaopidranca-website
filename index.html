@@ -79,9 +79,9 @@
 
     <!-- CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/css/styles.min.css" rel="stylesheet"> -->
-    <!-- <link href="/css/styles.css" rel="stylesheet" /> -->
-    <link href="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/css/styles.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet" /> 
     
+
   </head>
 
   <body id="page-top">
@@ -163,9 +163,9 @@
 
     <div class="hero__image">
 
-          <video autoplay loop muted>
+          <!-- <video autoplay loop muted>
            <source src="https://cdn.jsdelivr.net/gh/joaopidranca/multimedia@main/bg-video-1.mp4" type="video/mp4" />
-          </video>
+          </video>-->
 
          <!--  <img src="./assets/imgs-pages/luz-5.webp" alt=""/>   -->
 
@@ -4575,24 +4575,27 @@
         });
 
         tl.to(heroTitles, {
-          duration: 1,
+          duration: 2,
           ease: "power3.inOut",
         })
 
           .to(
             heroCaption,
             {
-              stagger: 0.2,
+              stagger: 0.1,
             },
-            "-=0.6"
+            "0.6"
           )
 
+          
+
+          
           .to(
             heroButton,
             {
               autoAlpha: 1,
             },
-            "0.7"
+            "0.9"
           )
 
           .to(
@@ -4600,8 +4603,9 @@
             {
               autoAlpha: 1,
             },
-            "0.5"
-          );
+            "-=1"
+          )
+          ;
 
         return tl;
       };
