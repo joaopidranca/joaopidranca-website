@@ -3412,7 +3412,7 @@ progress {
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-multimedia@main/star-solid.svg");
+  --bs-navbar-toggler-icon-bg: url("https://cdn.jsdelivr.net/gh/joaopidranca/multimedia@main/star-solid.svg");
 
   --bs-navbar-toggler-focus-width: 0rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -9117,7 +9117,7 @@ nav {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  /* background: url('https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-multimedia@main/teste-cave.webp'); */
+  /* background: url('https://cdn.jsdelivr.net/gh/joaopidranca/multimedia@main/teste-cave.webp'); */
   background-color: #ffc107;
   height: 100%;
   background-position: fixed;
