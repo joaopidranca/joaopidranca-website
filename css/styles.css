@@ -3412,7 +3412,7 @@ progress {
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("https://cdn.jsdelivr.net/gh/joaopidranca/multimedia@main/star-solid.svg");
+  --bs-navbar-toggler-icon-bg: url("https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-multimedia@main/star-solid.svg");
 
   --bs-navbar-toggler-focus-width: 0rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
