@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Árvore Genalógica</title>
+        
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-multimedia@main/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/js/familytree.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+        body {
+            font-family: "Hanken Grotesk";
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #grainad {
+            position: fixed !important;
+            top: 0%;
+            left: 0%;
+            content: "";
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+            z-index: 10000;
+        }
+        #search-bar, #date-nav {
+            margin-bottom: 20px;
+        }
+        #search-input {
+            width: 70%;
+            padding: 5px;
+        }
+        #search-button {
+            padding: 5px 10px;
+        }
+        #posts {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .post {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .post h2 {
+            margin-bottom: 5px;
+        }
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+
+        .button {
+            border: none;
+            background-color: #e04220;
+            color: #202020;
+            padding: 12px 40px;
+            border-radius: 0px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .button:hover{
+            background-color: #e04220;
+            color: white;
+        }
+
+    </style> 
+</head>
+<body>
+    <div id="grainad"></div>
+
+    <h1>Árvore Genelógica do Pidrança</h1>
+    <p>Bem-vindo a esta página!</p>
+    <p>Aqui encontra-se tudo o que consigo descobrir sobre o apelido "Pidrança".</p>
+    <p>Desde os primos aos tios, do avô aos tetra-avós</p>
+    
+    <div id="tree"></div>
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Procurar por conteúdo...">
+        <button id="search-button" onclick="searchPosts()">Procurar</button>
+    </div>
+
+    <div id="date-nav">
+        <label for="year">Ano:</label>
+        <select id="year">
+            <option value="">Todos os anos</option>
+        </select>
+        
+        <label for="month">Mês:</label>
+        <select id="month">
+            <option value="">Todos os meses</option>
+        </select>
+        
+        <button onclick="filterPosts()">Procurar</button>
+    </div>
+    
+
+    <!-- BALKAN FAMILY TREE -->
+    
+
+
+
+    <script>
+        // BALKAN FAMILY TREE JS CODE
+
+    let family = new FamilyTree("#tree", {
+        // options
+        nodeBinding: {
+            field_0: "name"
+        },
+        nodes: [
+            { id: 1, pids: [2], name: "Amber McKenzie", gender: "female" },
+            { id: 2, pids: [1], name: "Ava Field", gender: "male" },
+            { id: 3, mid: 1, fid: 2, name: "Peter Stevens", gender: "male" }
+        ]  
+    });
+
+
+        
+    </script>
+        <!-- Grain JS -->
+    <script src="https://cdn.jsdelivr.net/npm/grained@0.0.2/grained.min.js"></script>
+
+    <!-- Grain Settings JS -->
+    <script src="https://cdn.jsdelivr.net/gh/joaopidranca/joaopidranca-website@main/js/grain-settings.min.js"></script>
+</body>
+</html>
