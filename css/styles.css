@@ -188,9 +188,9 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: white;
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-dark-2);
+  background-color: white;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-rendering: optimizeLegibility;
@@ -1026,7 +1026,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--bs-link-hover-color);
+  color: #ffcc00;
   text-decoration: none;
 }
 
@@ -1311,11 +1311,11 @@ progress {
   }
 }
 
-#about-settings {
+#sobre-settings {
   padding-left: 40px;
 }
 @media (max-width: 568px) {
-  #about-settings {
+  #sobre-settings {
     padding-left: 0px;
   }
 }
@@ -3454,7 +3454,7 @@ progress {
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: var(--bs-navbar-brand-hover-color);
+  color: #ffcc00;
 }
 
 .navbar-nav {
