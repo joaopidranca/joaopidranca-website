@@ -9045,7 +9045,7 @@ nav {
 }
 
 #mainNav {
-  background-color: #fff;
+  background-color: #ffcc00;
   transition: background-color 0.2s ease;
   z-index: 9;
 }
@@ -9100,7 +9100,7 @@ nav {
     padding-right: 0;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #ffcc00;
     z-index: 3;
   }
 
