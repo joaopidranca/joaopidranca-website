@@ -59,7 +59,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // ----------------------------------------------------------
 
+  // Navbar shrink function
+  var navbarShrink = function () {
+    const navbarCollapsible = document.body.querySelector("#mainNav");
+    if (!navbarCollapsible) {
+      return;
+    }
 
+    if (window.scrollY === 0) {
+      navbarCollapsible.classList.remove("navbar-shrink");
+    } else {
+      navbarCollapsible.classList.add("navbar-shrink");
+    }
+  };
+
+  // Shrink the navbar
+  navbarShrink();
+
+  document.addEventListener("scroll", navbarShrink);
 
   // -------------------------------------------------
 
@@ -70,7 +87,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     if (window.scrollY === 0) {
-      navbarShowWhite.style.backgroundColor = "transparent";
+      navbarShowWhite.style.backgroundColor = "black";
     } else {
       navbarShowWhite.style.backgroundColor = "white";
     }
@@ -90,7 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     if (window.scrollY === 0) {
-      navbarOpacity.style.opacity = "0";
+      navbarOpacity.style.opacity = "1";
     } else {
       navbarOpacity.style.opacity = "1";
     }
