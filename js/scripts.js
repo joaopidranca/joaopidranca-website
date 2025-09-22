@@ -59,64 +59,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // ----------------------------------------------------------
 
-  // Navbar shrink function
-  var navbarShrink = function () {
-    const navbarCollapsible = document.body.querySelector("#mainNav");
-    if (!navbarCollapsible) {
-      return;
-    }
-
-    if (window.scrollY === 0) {
-      navbarCollapsible.classList.remove("navbar-shrink");
-    } else {
-      navbarCollapsible.classList.add("navbar-shrink");
-    }
-  };
-
-  // Shrink the navbar
-  navbarShrink();
-
-  document.addEventListener("scroll", navbarShrink);
-
-  // -------------------------------------------------
-
-  var navbarShowWhite = function () {
-    const navbarShowWhite = document.body.querySelector("#mainNav");
-    if (!navbarShowWhite) {
-      return;
-    }
-
-    if (window.scrollY === 0) {
-      navbarShowWhite.style.backgroundColor = "black";
-    } else {
-      navbarShowWhite.style.backgroundColor = "white";
-    }
-  };
-
-  // transparent and white navbar on scroll
-  navbarShowWhite();
-
-  document.addEventListener("scroll", navbarShowWhite);
-
-  // -------------------------------------------------
-
-  var navbarOpacity = function () {
-    const navbarOpacity = document.body.querySelector("#mainNavOpa");
-    if (!navbarOpacity) {
-      return;
-    }
-
-    if (window.scrollY === 0) {
-      navbarOpacity.style.opacity = "1";
-    } else {
-      navbarOpacity.style.opacity = "1";
-    }
-  };
-
-  // 0 / 1 opacity navbar title joão pidrança
-  navbarOpacity();
-
-  document.addEventListener("scroll", navbarOpacity);
 
   // ----------------------------------------------------------
 
